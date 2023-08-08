@@ -20,6 +20,10 @@
                 color: white;
                 font-size: 80%;
             }
+
+            .redText {
+              color: red;
+            }
         </style>
     </head>
 
@@ -90,8 +94,23 @@
                     <button type="submit" class="btn btn-primary">Search Availability</button>
 
                 </form>
+
+
         
             </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p id="myParagraph">
+              This is some text.
+            </p>
+            <p>
+              <button class="btn btn-outline-secondary" id="colorButton">
+                Click Me
+              </button>
+            </p>
+          </div>
         </div>
 
     </div>
@@ -120,6 +139,26 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
         crossorigin="anonymous"></script>
 
+    <script>
+      console.log("i am printing from javascript");
+      //alert("Hello");
+      
+      // let myEl = document.getElementById("myParagraph");
+      // myEl.classList.add("redText")
+
+      document.getElementById("colorButton").addEventListener("click", function(){
+        let myEl = document.getElementById("myParagraph");
+
+        if (myEl.classList.contains("redText")) {
+          myEl.classList.remove("redText")
+        } else {
+          myEl.classList.add("redText")
+        }
+        
+      })
+
+
+    </script>
 
     </body>
 
